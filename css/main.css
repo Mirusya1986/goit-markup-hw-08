@@ -242,12 +242,28 @@ ul {
   fill: var(--accent-color);
 }
 
-.menu-open {
+.menu-open, menu-close {
   width: 40px;
   height: 40px;
   border: none;
   cursor: pointer;
-  border-color: transparent;
+}
+
+.menu-close {
+  position: absolute;
+  right: 15px;
+}
+
+.mob-menu {
+  position: fixed;
+  background-color: #fff;
+  width: 100vw;
+  top: 0;
+  height: 100vw;
+}
+
+.mob-menu .container {
+  position: relative;
 }
 
 .hero {
