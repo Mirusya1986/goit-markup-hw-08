@@ -145,10 +145,13 @@ ul {
   align-items: center;
   background-color: var(--primary-background-color);
   margin: auto;
+  justify-content: space-between;
 }
 
 .header-logo {
   margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -157,7 +160,7 @@ ul {
 }
 
 .site-nav__list {
-  display: flex;
+  display: none;
 }
 
 .accent {
@@ -188,7 +191,7 @@ ul {
 }
 
 .contact-list {
-  display: flex;
+  display: none;
   margin-left: auto;
 }
 
@@ -239,10 +242,17 @@ ul {
   fill: var(--accent-color);
 }
 
+.menu-open {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-color: transparent;
+}
+
 .hero {
   background-color: var(--hero-footer-background-color);
   max-width: 1600px;
-  margin-top: 80px;
   padding-top: 118px;
   padding-bottom: 118px;
   margin-left: auto;
@@ -580,7 +590,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
-  margin-left: -30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    margin-left: -30px;
+  }
 }
 
 .clients-list__item {
@@ -1119,6 +1134,7 @@ ul {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
 .icon-checkbox {
