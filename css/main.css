@@ -747,6 +747,12 @@ ul {
   margin-top: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients-list__item {
+    flex-basis: calc((100% - 180px) / 6);
+  }
+}
+
 .clients-list__link {
   display: flex;
   flex-basis: calc(100% / 4 - 30px);
@@ -767,6 +773,7 @@ ul {
 @media screen and (min-width: 1200px) {
   .clients-list__link {
     flex-basis: calc(100% / 6 - 30px);
+    padding: 15px;
   }
 }
 
@@ -789,11 +796,17 @@ ul {
 .footer-address {
   display: flex;
   align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .address-data {
   margin-right: 70px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
 .page-footer {
@@ -843,6 +856,10 @@ ul {
 
 .footer-socials {
   padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
 .footer-list {
@@ -885,11 +902,33 @@ ul {
 }
 
 .footer-sign {
-  margin-left: 93px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-sign .footer-sign {
+    margin-left: auto;
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
 }
 
 .footer-wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-wrapper {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+    flex-direction: row;
+  }
 }
 
 .footer-title {
@@ -898,13 +937,16 @@ ul {
 }
 
 .mail-form {
-  margin-right: 12px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .email-form {
   width: 400px;
   height: 50px;
   padding: 15px 16px;
+  margin-left: 15px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 400;
@@ -916,6 +958,14 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .email-form .email-form {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .email-form:hover, .email-form:focus {
@@ -966,13 +1016,22 @@ ul {
 
 .portfolio-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-right: -8px;
+  margin-top: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio-list__item {
-  display: block;
   margin-right: 8px;
+  margin-top: 15px;
 }
 
 .portfolio-list__item:not(:last-child) {
