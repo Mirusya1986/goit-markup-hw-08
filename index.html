@@ -223,7 +223,19 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img src="./images/pd.jpg" width="100%" alt="фото Демьяненко" />
+              <picture>
+                <source srcset="./images/img.webp, ./images/img-2x.webp"
+                media="(min-width:1200px)"
+                type="image/web"/>
+                <source srcset="./images/img.pd-desk.jpg, ./images/img.pd-desk-2x.jpg"
+                media="(min-width:1200px)"/>
+                <source srcset="./images/img.pd-tab.webp, ./images/img.pd-tab-2x.webp"
+                media="(min-width:768px)" type="image/web"/>
+                <source srcset="./images/img.pd-tab.jpg, ./images/img.pd-tab-2x.jpg" media="(min-width:768px)"/>
+<source srcset="./images/img.pd-mob.webp, ./images/img.pd-mob-2x.webp" media="(min-width:280px)" type="image/web"/>
+<source srcset="./images/img.pd_mob.jpg, ./images/img.pd-mob-2x.jpg" media="(min-width:280px)"/>
+<img src="#" alt="Игорь Демьяненко"/>
+            </picture>
               <div class="team-info">
                 <h3 class="team-heading">Игорь Демьяненко</h3>
                 <p class="team-position" lang="en">Product Designer</p>
@@ -261,7 +273,9 @@
             </li>
             
               <li class="team-list__item">
-                <img src="./images/fd.jpg" width="100%" alt="фото Репина" />
+              <picture>
+                <img src="./images/fd-desk.jpg" width="100%" alt="фото Репина" />
+              </picture>
                 <div class="team-info">
                   <h3 class="team-heading">Ольга Репина</h3>
                   <p class="team-position" lang="en">Frontend Developer</p>
@@ -300,7 +314,9 @@
             
             
               <li class="team-list__item">
-                <img src="./images/Mar.jpg" width="100%" alt="фото Тарасов" />
+              <picture>
+                <img src="./images/mar-desk.jpg" width="100%" alt="фото Тарасов" />
+              </picture>
                 <div class="team-info">
                   <h3 class="team-heading">Николай Тарасов</h3>
                   <p class="team-position" lang="en">Marketing</p>
@@ -338,7 +354,9 @@
               </li>
             
               <li class="team-list__item">
-                <img src="./images/uid.jpg" width="100%" alt="фото Ермаков" />
+              <picture>
+                <img src="./images/uid-desk.jpg" width="100%" alt="фото Ермаков" />
+              </picture>
                 <div class="team-info">
                   <h3 class="team-heading">Михаил Ермаков</h3>
                   <p class="team-position" lang="en">UI Designer</p>
