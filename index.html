@@ -24,10 +24,11 @@
   </head>
 
   <body>
-    <!--header-->
+    <!-- HEADER -->
+  
     <header class="page-header">
       <!--Полная информация о компании-->
-      <div class="container main-nav">
+       <div class="container main-nav">
         <nav class="header-nav">
           <a class="header-logo link" href="/"
             ><span class="accent">Web</span>Studio</a
@@ -43,7 +44,16 @@
               <a class="nav-link link" href="contacts.html">Контакты</a>
             </li>
           </ul>
-          <ul class="contact-list">
+        </nav>
+        <!--Mobile button-->
+        <button class="header__mobile-btn" type="button">
+<svg class="header__mobile-icon" width="40" height="40">
+  <use href="./images/symbol-defs-123.svg#icon-menu_40px"></use>
+</svg>
+        </button>
+
+        <!--Contacts-->
+          <ul class="contact-list list">
             <li class="contact-list__item">
               <a class="contact-list__link" href="mailto:info@devstudio.com"
                 >
@@ -61,59 +71,55 @@
               >
             </li>
           </ul>
-        </nav>
-        <button class="header__menu-open" type="button">
-<svg class="menu-open">
-  <use href="./images/symbol-defs-123.svg#icon-menu_40px"></use>
-</svg>
-        </button>
+        </div>
+        <!--Mobile menu-->
         <div class="mob-menu is-hidden">
           <div class="container">
-          <button class="header__menu-close" type="button">
-            <svg class="menu-close">
+          <button class="header__menu-close" type="button" >
+            <svg class="icon-menu-close" width="40" height="40">
               <use href="./images/symbol-defs-123.svg#icon-close_40px"></use>
             </svg>
                     </button>
                     <ul class="mob-menu-list list">
-                      <li class="mob-menu-item">
-                        <a href="" class="mob-menu-link">Студия</a>
+                      <li class="mob-menu__item">
+                        <a href="./index.html" class="mob-menu__link--current">Студия</a>
                       </li>
-                      <li class="mob-menu-item">
-                        <a href="" class="mob-menu-link">Портфолио</a>
+                      <li class="mob-menu__item">
+                        <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
                       </li>
-                      <li class="mob-menu-item">
-                        <a href="" class="mob-menu-link">Контакты</a>
+                      <li class="mob-menu__item">
+                        <a href="#" class="mob-menu__link">Контакты</a>
                       </li>
                     </ul>
                     <div class="mob-menu-bottom">
-                    <ul class="mob-contacts-list list">
-                      <li class="mob-contacts-item">
-                      <a href="" class="mob-contacts-link mob-contacts-tel-link">+38 096 111 11 11</a>
+                    <ul class="mob-contacts__list list">
+                      <li class="mob-contacts__item">
+                      <a href="" class="mob-contacts__link mob-contacts-tel__link">+38 096 111 11 11</a>
                     </li>
-                    <li class="mob-contacts-item">
-                      <a href="" class="mob-contacts-link">info@devstudio.com</a>
+                    <li class="mob-contacts__item">
+                      <a href="" class="mob-contacts__link">info@devstudio.com</a>
                     </li>
                   </ul>
-                    <ul class="mob-social-list list">
-                      <li class="mob-social-item">
-                        <a href="" class="mob-social-link">Instagram</a>
+                    <ul class="mob-social__list list">
+                      <li class="mob-social__item">
+                        <a href="" class="mob-social__link">Instagram</a>
                       </li>
-                      <li class="mob-social-item">
-                        <a href="" class="mob-social-link">Twitter</a>
+                      <li class="mob-social__item">
+                        <a href="" class="mob-social__link">Twitter</a>
                       </li>
-                      <li class="mob-social-item">
-                        <a href="" class="mob-social-link">Facebook</a>
+                      <li class="mob-social__item">
+                        <a href="" class="mob-social__link">Facebook</a>
                       </li>
-                      <li class="mob-social-item">
-                        <a href="" class="mob-social-link">LinkedIn</a>
+                      <li class="mob-social__item">
+                        <a href="" class="mob-social__link">LinkedIn</a>
                       </li>
                     </ul>
                   </div>
         </div>
       </div>
-      </div>
       
-    </header>
+      
+    </header> 
 
     <!--Hero-->
     <main>
