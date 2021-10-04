@@ -27,7 +27,7 @@
     <!--header-->
     <header class="page-header">
       <!--Полная информация о компании-->
-       <div class="container">
+       <div class="container header_container">
         <nav class="header-nav">
           <a class="header-logo link" href="/"
             ><span class="accent">Web</span>Studio</a
@@ -43,29 +43,83 @@
               <a class="nav-link link" href="contacts.html">Контакты</a>
             </li>
           </ul>
-          <ul class="contact-list">
-            <li class="contact-list__item">
-              <a class="contact-list__link" href="mailto:info@devstudio.com"
-                >
-                <svg class="contact-list__icon" width="16" height="12">
-                  <use href="./images/sprite.svg#icon-envelope"></use>
-                  </svg>info@devstudio.com
-                  </a>
-              </li>
-            
-            <li class="contact-list__item">
-              <a class="contact-list__link" href="tel:+380961111111">
-               <svg class="contact-list__icon" width="10" height="16">
-                  <use href="./images/sprite.svg#icon-smartphone"></use>
-                  </svg>+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div> 
+          </nav>
+
           <!--Button-->
           
           <button type="button" class="menu-open"></button>
+          <svg class="header__mobile-icon">
+            <use href="./images/menu_24px.svg"></use>
+          </svg> 
+        </button>
+
+
+        <ul class="mob-contacts-menu list">
+          <li class="mob-contacts-item">
+            <a href="" class="mob-contacts-link mob-contacts-tel-link">+38 096 111 11 11</a></li>
+          <li class="mob-contacts-item">
+            <a href="" class="mob-contacts-link">info@devstudio.com</a></li>
+        </ul>
+        </div>
+
+
+
+<!--Mobile menu-->
+<div class="mobile is-open">
+  <button type="button" class="mobile__close-btn">
+    <svg class="mobile__close-icon" width="18" height="18"></svg>
+  </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-item">
+            <a href="./index.html" class="mob-menu-link link active">Студия</a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="./portfolio.html" class="mob-menu-link link">Портфолио</a>
+          </li>
+          <li class="mob-menu-item">
+            <a href="" class="mob-menu-link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="contact-list">
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="mailto:info@devstudio.com"
+              >
+              <svg class="contact-list__icon" width="16" height="12">
+                <use href="./images/sprite.svg#icon-envelope"></use>
+                </svg>info@devstudio.com
+                </a>
+            </li>
+          
+          <li class="contact-list__item">
+            <a class="contact-list__link" href="tel:+380961111111">
+             <svg class="contact-list__icon" width="10" height="16">
+                <use href="./images/sprite.svg#icon-smartphone"></use>
+                </svg>+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        
+
+        <ul class="mob-socials-menu list">
+          <li class="mob-socials-item">
+            <a href="" class="mob-socials-link">Instagram</a></li>
+          <li class="mob-socials-item">
+            <a href="" class="mob-socials-link">Twitter</a></li>
+            <li class="mob-socials-item">
+              <a href="" class="mob-socials-link">Facebook</a></li>
+            <li class="mob-socials-item">
+              <a href="" class="mob-socials-link">LinkedIn</a></li>
+</ul>
+
+          
+          
+        </div>
+     
+          <!-- Button
+          
+          <button type="button" class="menu-open"></button>
+          <svg class=""></svg>
         
       </div>
       <div class="container">
@@ -104,7 +158,7 @@
         </ul>
       </div>
       </div>
-      </div>
+      </div> -->
     </header> 
 
     <!--Hero-->
@@ -183,34 +237,40 @@
           <ul class="services-list">
             <li class="services-list__element">
               <div class="services-element-wrapper">
-              <img
-                class="services-item element picture"
-                src="./images/box-1.jpg"
-                width="370" height="294"
-                alt="написание кода"
-              />
+                <picture>
+                  <source srcset="./images/imgbox-desk.webp 1x, ./images/imgbox-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/web"/>
+                  <source srcset="./images/imgbox-desk.jpg 1x, ./images/imgbox-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+  <img src="#" alt="Десктопные приложения"/>
+              </picture>
               <h3 class="services-element-text">Десктопные приложения</h3>
             </div>
             </li>
             <li class="services-list__element">
               <div class="services-element-wrapper">
-                <img
-                class="services-item element picture"
-                src="./images/box-2.jpg"
-                width="370" height="294"
-                alt="валидация по"
-              />
+                <picture>
+                  <source srcset="./images/imgbox-2.webp 1x, ./images/imgbox-2-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/web"/>
+                  <source srcset="./images/imgbox-2.jpg 1x, ./images/imgbox-2-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+  <img src="#" alt="Мобильные приложения"/>
+              </picture>
               <h3 class="services-element-text">Мобильные приложения</h3>
             </div>
             </li>
             <li class="services-list__element">
               <div class="services-element-wrapper">
-                <img
-                class="services-item elemet picture"
-                src="./images/box-3.jpg"
-                width="370" height="294"
-                alt="подбор цветовой палитры"
-              />
+                <picture>
+                  <source srcset="./images/imgbox-3.webp 1x, ./images/imgbox-3-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/web"/>
+                  <source srcset="./images/imgbox-3.jpg 1x, ./images/imgbox-3-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+  <img src="#" alt="Дизайнерские решения"/>
+              </picture>
               <h3 class="services-element-text">Дизайнерские решения</h3>
             </div>
             </li>
@@ -232,8 +292,8 @@
                 <source srcset="./images/img.pd-tab.webp, ./images/img.pd-tab-2x.webp"
                 media="(min-width:768px)" type="image/web"/>
                 <source srcset="./images/img.pd-tab.jpg, ./images/img.pd-tab-2x.jpg" media="(min-width:768px)"/>
-<source srcset="./images/img.pd-mob.webp, ./images/img.pd-mob-2x.webp" media="(min-width:280px)" type="image/web"/>
-<source srcset="./images/img.pd_mob.jpg, ./images/img.pd-mob-2x.jpg" media="(min-width:280px)"/>
+<source srcset="./images/img.pd-mob.webp 1x, ./images/img.pd-mob-2x.webp 2x" media="(min-width:280px)" type="image/web"/>
+<source srcset="./images/img.pd_mob.jpg 1x, ./images/img.pd-mob-2x.jpg 2x" media="(min-width:280px)"/>
 <img src="#" alt="Игорь Демьяненко"/>
             </picture>
               <div class="team-info">
@@ -273,8 +333,18 @@
             </li>
             
               <li class="team-list__item">
-              <picture>
-                <img src="./images/fd-desk.jpg" width="100%" alt="фото Репина" />
+                <picture>
+                  <source srcset="./images/img.fd-desk.webp 1x, ./images/img.fd-desk-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/web"/>
+                  <source srcset="./images/img.fd-desk.jpg 1x, ./images/img.fd-desk-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/img.fd-tab.webp 1x, ./images/img.fd-tab-2x.webp 2x"
+                  media="(min-width:768px)" type="image/web"/>
+                  <source srcset="./images/img.fd-tab.jpg 1x, ./images/img.fd-tab-2x.jpg 2x" media="(min-width:768px)"/>
+  <source srcset="./images/img.fd-mob.webp 1x, ./images/img.fd-mob-2x.webp 2x" media="(min-width:280px)" type="image/web"/>
+  <source srcset="./images/img.fd-mob.jpg 1x, ./images/img.fd-mob-2x.jpg 2x" media="(min-width:280px)"/>
+  <img src="#" alt="Ольга Репина"/>
               </picture>
                 <div class="team-info">
                   <h3 class="team-heading">Ольга Репина</h3>
@@ -314,8 +384,18 @@
             
             
               <li class="team-list__item">
-              <picture>
-                <img src="./images/mar-desk.jpg" width="100%" alt="фото Тарасов" />
+                <picture>
+                  <source srcset="./images/imgmar-desk.webp 1x, ./images/imgmar-desk-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/web"/>
+                  <source srcset="./images/imgmar-desk.jpg 1x, ./images/imgmar-desk-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/imgmar-tab.webp 1x, ./images/imgmar-tab-2x.webp 2x"
+                  media="(min-width:768px)" type="image/web"/>
+                  <source srcset="./images/imgmar-tab.jpg 1x, ./images/imgmar-tab-2x.jpg 2x" media="(min-width:768px)"/>
+  <source srcset="./images/imgmar-mob.webp 1x, ./images/imgmar-mob-2x.webp 2x" media="(min-width:280px)" type="image/web"/>
+  <source srcset="./images/imgmar-mob.jpg 1x, ./images/imgmar-mob-2x.jpg 2x" media="(min-width:280px)"/>
+  <img src="#" alt="Николай Тарасов"/>
               </picture>
                 <div class="team-info">
                   <h3 class="team-heading">Николай Тарасов</h3>
@@ -354,8 +434,18 @@
               </li>
             
               <li class="team-list__item">
-              <picture>
-                <img src="./images/uid-desk.jpg" width="100%" alt="фото Ермаков" />
+                <picture>
+                  <source srcset="./images/imguid-desk.webp 1x, ./images/imguid-desk-2x.webp 2x"
+                  media="(min-width:1200px)"
+                  type="image/web"/>
+                  <source srcset="./images/imguid-desk.jpg 1x, ./images/imguid-desk-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/imguid-tab.webp 1x, ./images/imguid-tab-2x.webp 2x"
+                  media="(min-width:768px)" type="image/web"/>
+                  <source srcset="./images/imguid-tab.jpg 1x, ./images/imguid-tab-2x.jpg 2x" media="(min-width:768px)"/>
+  <source srcset="./images/imguid-mob.webp 1x, ./images/imguid-mob-2x.webp 2x" media="(min-width:280px)" type="image/web"/>
+  <source srcset="./images/imguid_mob.jpg 1x, ./images/imguid-mob-2x.jpg 2x" media="(min-width:280px)"/>
+  <img src="#" alt="Михаил Ермаков"/>
               </picture>
                 <div class="team-info">
                   <h3 class="team-heading">Михаил Ермаков</h3>

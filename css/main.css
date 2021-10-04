@@ -136,6 +136,12 @@ ul {
   background-color: var(--primary-background-color);
 }
 
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .accent {
   color: var(--accent-color);
 }
@@ -145,7 +151,6 @@ ul {
   align-items: center;
   background-color: var(--primary-background-color);
   margin: auto;
-  justify-content: space-between;
 }
 
 .header-logo {
@@ -161,6 +166,7 @@ ul {
 
 .site-nav__list {
   display: none;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -179,7 +185,7 @@ ul {
 
 .nav-link {
   position: relative;
-  display: inline-flex;
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   text-decoration: none;
@@ -194,6 +200,81 @@ ul {
 
 .nav-link:hover, .nav-link:focus {
   color: var(--accent-color);
+}
+
+.menu-open {
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+  padding: 10px 0;
+}
+
+.header__mobile-icon {
+  width: 40px;
+  height: 40px;
+  padding: 12px 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-open:hover .header__mobile-icon, .menu-open:focus .header__mobile-icon {
+  fill: var(--accent-color);
+}
+
+.mob-contacts-menu {
+  flex-direction: column;
+  padding: 14px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .mob-contacts-menu {
+    display: none;
+  }
+}
+
+.mob-contacts-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-background-color);
+  overflow: auto;
+  padding: 48px 25px;
+  max-width: 480px;
+}
+
+.mobile__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
 }
 
 .contact-list {
@@ -272,25 +353,6 @@ ul {
     display: flex;
     align-items: center;
     align-items: center;
-  }
-}
-
-.contact-list__icon .menu-open, .contact-list__icon .menu-close {
-  width: 40px;
-  height: 40px;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-list__icon .mob-menu.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-@media screen and (min-width: 768px) {
-  .contact-list__icon .mob-menu.is-hidden {
-    visibility: hidden;
   }
 }
 
@@ -494,6 +556,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
+    margin-top: -30px;
   }
 }
 
@@ -505,7 +568,7 @@ ul {
 @media screen and (min-width: 768px) {
   .quality-list__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    margin-left: 30px;
   }
 }
 
@@ -513,6 +576,21 @@ ul {
   .quality-list__item {
     flex-basis: calc(100% / 4 - 30px);
   }
+}
+
+.quality-icons-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 0;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+}
+
+.quality-list__icon {
+  width: 70px;
+  height: 70px;
 }
 
 .quality-title {
@@ -529,21 +607,6 @@ ul {
   .quality-title {
     text-align: left;
   }
-}
-
-.quality-list__icon {
-  width: 70px;
-  height: 70px;
-}
-
-.quality-icons-table {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 30px;
-  border-radius: 4px;
-  background-color: #f5f4fa;
 }
 
 .services {
@@ -576,7 +639,7 @@ ul {
   margin-top: -30px;
 }
 
-.services-item {
+.services-list__element {
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
@@ -584,9 +647,6 @@ ul {
 
 .services-element-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .services-element-text {
@@ -594,13 +654,10 @@ ul {
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 370px;
+  width: 100%;
   height: 70px;
   bottom: 0;
   left: 0;
-  flex-basis: calc((100% - 90px) / 3);
-  margin-left: 30px;
-  margin-top: 30px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -627,16 +684,7 @@ ul {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
   margin-top: -30px;
-}
-
-@media screen and (min-width: 768px) {
-  .team-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-  }
 }
 
 .team-info {
@@ -656,7 +704,8 @@ ul {
 @media screen and (min-width: 768px) {
   .team-list__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
   }
 }
 
@@ -1098,8 +1147,14 @@ ul {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects__item:not(:nth-last-child(-n + 3)) {
+.projects__item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
 .projects__item:hover, .projects__item:focus {
@@ -1139,22 +1194,9 @@ ul {
   overflow: hidden;
 }
 
-.projects__title {
-  font-weight: 700;
-  font-size: 18px;
-  font-style: normal;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: var(--title-color);
-  margin-bottom: 4px;
-}
-
-.projects__desc {
-  font-size: 16px;
-  line-height: 1.87;
-  font-style: normal;
-  text-decoration: none;
-  color: var(--text-color);
+.projects img {
+  min-width: 100%;
+  height: auto;
 }
 
 .image-overlay {
@@ -1180,6 +1222,24 @@ ul {
 .projects__item:hover .image-overlay,
 .projects__item:focus .image-overlay {
   transform: translateY(0);
+}
+
+.projects__desc {
+  font-size: 16px;
+  line-height: 1.87;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.projects__title {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  margin-bottom: 4px;
 }
 
 .backdrop {
