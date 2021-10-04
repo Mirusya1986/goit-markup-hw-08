@@ -169,6 +169,12 @@ ul {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .site-nav__list {
+    display: flex;
+  }
+}
+
 .accent {
   color: var(--accent-color);
 }
@@ -199,6 +205,16 @@ ul {
 .contact-list {
   display: none;
   margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-list {
+    display: block;
+  }
+  .contact-list .link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .contact-list__link {
@@ -267,6 +283,12 @@ ul {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .menu-open {
+    display: none;
+  }
+}
+
 .menu-close {
   position: absolute;
   right: 15px;
@@ -282,13 +304,30 @@ ul {
 
 .mob-menu .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 400px;
 }
 
-.mob-menu-item:not(:last-child) {
+@media screen and (min-width: 768px) {
+  .mob-menu .container {
+    display: none;
+  }
+}
+
+.mob-menu .mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mob-menu .mob-menu-item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.mob-menu-link {
+.mob-menu .mob-menu-link {
   font-family: Roboto;
   font-size: 40px;
   font-weight: 500;
@@ -299,15 +338,15 @@ ul {
   text-decoration: none;
 }
 
-.mob-contacts-list {
+.mob-menu .mob-contacts-list {
   margin-bottom: 64px;
 }
 
-.mob-contacts-item:not(:last-child) {
+.mob-menu .mob-contacts-item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.mob-contacts-link {
+.mob-menu .mob-contacts-link {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
@@ -316,25 +355,25 @@ ul {
   text-decoration: none;
 }
 
-.mob-contacts-tel-link {
+.mob-menu .mob-contacts-tel-link {
   font-size: 34px;
   line-height: 1.18;
 }
 
-.mob-social-list {
+.mob-menu .mob-social-list {
   display: flex;
 }
 
-.mob-social-item:not(:last-child) {
+.mob-menu .mob-social-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.mob-social-item:not(:last-child) .mob-social-link {
+.mob-menu .mob-social-item:not(:last-child) .mob-social-link {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 10px;
 }
 
-.mob-social-link {
+.mob-menu .mob-social-link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
