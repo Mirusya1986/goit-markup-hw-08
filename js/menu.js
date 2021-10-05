@@ -1,14 +1,13 @@
 (() => {
-  const refs = {
-    openMenuBtn: document.querySelector('.menu-open'),
-    closeMenuBtn: document.querySelector('.menu-close'),
-    menu: document.querySelector('.mob-menu'),
-  };
+  const menuBtnRef = document.querySelector('[data-menu-button]');
+  const mobileMenuRef = document.querySelector('[data-menu]');
+  const mobileBtnClose = document.querySelector('[data-menu-close]');
 
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  menuBtnRef.addEventListener('click', () => {
+    mobileMenuRef.classList.toggle('is-open');
+  });
 
-  function toggleMenu() {
-    refs.menu.classList.toggle('is-hidden');
-  }
+  mobileBtnClose.addEventListener('click', () => {
+    mobileMenuRef.classList.toggle('is-open');
+  });
 })();
